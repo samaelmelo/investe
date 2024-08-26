@@ -1,10 +1,7 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
   const [formValue, setFomValue] = useState({
     entrada: "",
     taxa: "",
@@ -41,7 +38,6 @@ function App() {
     
     const entrada = valor
     
-    console.log({juros, valor, meses, depositoMensal})
     const brl = (v) => v.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
     
     for( let i = 1; i <= meses; i++){
@@ -55,19 +51,11 @@ setResultado({
       valorTotal: brl(valor)
     })
 
-    // return ( `Valor de investimento ${brl(entrada + depositoMensal * meses)} ========== Valor de juros em ${meses}x ${brl(valor - entrada - (depositoMensal * meses))} ======== Valor total: ${brl(valor)}  `)
+    
 }
 
 
-  // const handleChange = (key, e) => {
-
-   
-
-  //     setFomValue(obj => ({
-  //       ...obj,
-  //       [key]: Number(e.target.value)
-  //     }))
-  // }
+ 
 
 
   const reset = () => {
@@ -115,7 +103,7 @@ setResultado({
 
   return (
     <div className='wrapper'>
-      <h1>Descubra o retorno financeiro de acordo com <br/> o seu tipo de investimento. </h1>
+      <h1>Investe </h1>
      <form>
         <div className='flex'>
 
